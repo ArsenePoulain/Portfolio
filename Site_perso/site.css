@@ -1,0 +1,241 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: rgb(255, 166, 0);
+}
+
+::selection {
+    color: black;
+    background-color: rgb(57, 103, 143);
+}
+
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.background {
+    position: fixed;
+    inset: 0;
+    background-image: url('image/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -2;
+}
+
+.background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: -1;
+}
+
+.bandeau {
+    background-color: rgb(53, 52, 52);
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid rgb(44, 44, 44);
+}
+
+.photo_titre_bandeau {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+    flex-shrink: 0;
+}
+
+.photo_titre_bandeau a {
+    color: white;
+}
+
+.image_accueil {
+    height: 120px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.photo_titre_bandeau h1 {
+    margin-left: 10px;
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+#bouttons_liens_nav {
+    border-left: 2px solid grey;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bouttons_liens {
+    background-color: #ffffff;
+    color: #333;
+    height: 50px;
+    width: 180px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    border-radius: 12px;
+    border-right: 2px solid black;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.bouttons_liens:hover {
+    background-color: #e0e7ff;
+    color: #3730a3;
+}
+
+.container {
+    margin: 0 8px;
+    padding-bottom: 40px;
+    color: white;
+    flex: 1;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 2em;
+    margin: 36px 0 20px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+.hero-title {
+    text-align: center;
+    font-size: 2.8em;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 0 2px 18px rgba(0,0,0,0.7);
+    margin-top: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    text-align: center;
+    font-size: 1.1em;
+    color: #cfd8e3;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.blocs-accueil {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: stretch;
+    margin: 0 6%;
+    flex-wrap: wrap;
+}
+
+.bloc-accueil {
+    flex: 1;
+    min-width: 240px;
+    max-width: 380px;
+    background-color: rgba(80, 80, 80, 0.82);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 14px;
+    padding: 28px 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+    backdrop-filter: blur(4px);
+}
+
+.bloc-accueil h3 {
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #a8c4e0;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(168, 196, 224, 0.3);
+    padding-bottom: 8px;
+}
+
+.bloc-accueil p {
+    font-size: 1.02em;
+    line-height: 1.75;
+    color: #eef2f6;
+}
+
+.bonne-visite {
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: 10px;
+}
+
+.bonne-visite h2 {
+    font-size: 1.6em;
+    color: #ffffff;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    display: inline-block;
+    border-bottom: 2px solid rgba(255,255,255,0.4);
+    padding-bottom: 6px;
+}
+
+.basPage {
+    background-color: #222;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #ccc;
+    position: relative;
+    z-index: 1;
+}
+
+@media print {
+    .bandeau, .background { display: none; }
+}
+
+@media (max-width: 800px) {
+    .bandeau {
+        height: auto;
+        flex-direction: column;
+        padding: 10px;
+    }
+    #bouttons_liens_nav {
+        border-left: none;
+        border-top: 2px solid grey;
+        flex-wrap: wrap;
+        height: auto;
+        gap: 8px;
+        padding: 8px 0;
+    }
+    .bouttons_liens { width: 130px; font-size: 14px; }
+    .hero-title { font-size: 2em; }
+    .blocs-accueil { margin: 0 4%; }
+}

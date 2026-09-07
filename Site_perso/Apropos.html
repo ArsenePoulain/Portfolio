@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>À propos – Arsène Poulain</title>
+    <link rel="stylesheet" href="site.css">
+    <style>
+        .apropos-grid { display: flex; gap: 40px; margin: 30px 5%; align-items: flex-start; flex-wrap: wrap; }
+        .apropos-texte { flex: 1 1 55%; }
+        .apropos-texte p { line-height: 1.75; margin-bottom: 14px; }
+        .apropos-photo { flex: 0 0 220px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+        .apropos-photo img { width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 3px solid #3730a3; }
+        .tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        .tag { background-color: #e0e7ff; color: #3730a3; padding: 4px 12px; border-radius: 12px; font-size: 0.85em; font-weight: bold; }
+        .tag.vert { background-color: #d1fae5; color: #065f46; }
+        .tag.bleu { background-color: #dbeafe; color: #1e40af; }
+        .section-titre { font-size: 1.1em; font-weight: bold; color: #a8c4e0; margin: 24px 0 6px; border-left: 4px solid #3730a3; padding-left: 10px; }
+        .loisirs-grid { display: flex; gap: 16px; flex-wrap: wrap; margin: 10px 5% 30px; }
+        .loisir-card { background: rgba(80,80,80,0.7); border: 1px solid rgba(255,255,255,0.15); border-radius: 10px; padding: 14px 20px; flex: 1 1 180px; }
+        .loisir-card h4 { margin: 0 0 6px; color: #a8c4e0; }
+        .loisir-card p { margin: 0; font-size: 0.9em; line-height: 1.5; }
+        .btn-lien { display: inline-block; margin-top: 20px; background: #3730a3; color: #fff; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="bandeau">
+            <div class="photo_titre_bandeau">
+                <img src="image/user_arpoulain.jpeg" alt="photo" class="image_accueil">
+                <h1><a href="index.html">Poulain<br>Arsène</a></h1>
+            </div>
+            <nav id="bouttons_liens_nav">
+                <a href="Projets.html"><div class="bouttons_liens"><strong>Projets</strong></div></a>
+                <a href="Apropos.html"><div class="bouttons_liens"><strong>A propos</strong></div></a>
+                <a href="Competences.html"><div class="bouttons_liens"><strong>Compétences</strong></div></a>
+                <a href="contact.html"><div class="bouttons_liens"><strong>Contact</strong></div></a>
+            </nav>
+        </header>
+        <div class="background"></div>
+        <section class="container">
+            <h1>À propos de moi</h1>
+            <div class="apropos-grid">
+                <div class="apropos-texte">
+                    <div class="section-titre">Qui suis-je ?</div>
+                    <p>Je suis <strong>Arsène Poulain</strong>, étudiant en première année de BUT Informatique à l'IUT de Clermont-Ferrand, en recherche d'une alternance. Mon parcours est guidé par une passion pour le développement que je cultive depuis l'enfance.</p>
+                    <p>Tout a commencé par le développement web : HTML, CSS, PHP. C'est en arrivant au BUT que j'ai découvert l'algorithmique et la programmation orientée objet, ce qui n'a fait que renforcer ma vocation.</p>
+                    <p>À terme, je souhaite intégrer une entreprise ambitieuse, capable de répondre efficacement à ses clients avec des projets techniques stimulants.</p>
+                    <div class="tag-list">
+                        <span class="tag">BUT Informatique</span>
+                        <span class="tag bleu">Clermont-Ferrand</span>
+                        <span class="tag vert">Alternance recherchée</span>
+                    </div>
+                    <div class="section-titre">Expérience professionnelle</div>
+                    <p>En parallèle de mes études, j'occupe un <strong>CDI Étudiant en grande surface</strong>. Ce poste m'a appris à interagir avec une clientèle variée et à développer des qualités relationnelles au quotidien.</p>
+                    <div class="section-titre">Équilibre et vie personnelle</div>
+                    <p>Je crois profondément à l'importance de préserver du temps pour ses proches et ses passions. Ce rythme équilibré me permet de rester concentré et motivé dans mes projets techniques.</p>
+                </div>
+                <div class="apropos-photo">
+                    <img src="image/user_arpoulain.jpeg" alt="Portrait Arsène Poulain">
+                    <p style="text-align:center; font-size:0.9em; color:#ccc;">Arsène Poulain<br><em>BUT Informatique – 1ère année</em></p>
+                </div>
+            </div>
+            <div class="loisirs-grid">
+                <div class="loisir-card"><h4>💻 Développement</h4><p>Projets web personnels, exploration de nouvelles technologies, challenges de code.</p></div>
+                <div class="loisir-card"><h4>🎮 Jeux vidéo</h4><p>Passionné depuis l'enfance, les jeux vidéo ont nourri ma curiosité pour la logique et la conception numérique.</p></div>
+                <div class="loisir-card"><h4>👥 Relations</h4><p>Amis, famille, collègues : entretenir des liens humains solides est une valeur essentielle pour moi.</p></div>
+            </div>
+            <div class="bonne-visite">
+                <a href="Competences.html" class="btn-lien">Voir mes compétences →</a>
+            </div>
+        </section>
+    </div>
+    <footer class="basPage"><p>&copy; 2025 Poulain Arsène. Tous droits réservés.</p></footer>
+</body>
+</html>

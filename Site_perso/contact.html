@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact – Arsène Poulain</title>
+    <link rel="stylesheet" href="site.css">
+    <style>
+        .contact-wrapper { display: flex; gap: 40px; margin: 30px 5%; flex-wrap: wrap; align-items: flex-start; }
+        .contact-infos { flex: 0 0 250px; }
+        .contact-infos h2 { font-size: 1.1em; color: #a8c4e0; border-left: 4px solid #3730a3; padding-left: 10px; margin-bottom: 16px; }
+        .info-ligne { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 0.95em; }
+        .cv-btn { display: inline-block; margin-top: 20px; background: #3730a3; color: #fff; padding: 10px 20px; border-radius: 8px; font-weight: bold; font-size: 0.95em; }
+        .cv-btn:hover { background: #1e40af; color: #fff; }
+        .contact-form { flex: 1 1 350px; }
+        .contact-form h2 { font-size: 1.1em; color: #a8c4e0; border-left: 4px solid #3730a3; padding-left: 10px; margin-bottom: 16px; }
+        .form-group { display: flex; flex-direction: column; margin-bottom: 14px; }
+        .form-group label { font-size: 0.88em; font-weight: bold; color: #ccc; margin-bottom: 4px; }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group select,
+        .form-group textarea { padding: 9px 12px; border: 1px solid #555; border-radius: 7px; font-size: 0.95em; font-family: inherit; background: rgba(255,255,255,0.08); color: #fff; outline: none; transition: border-color 0.2s; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #3730a3; background: rgba(255,255,255,0.12); }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+        .form-group select option { background: #333; }
+        .radio-group { display: flex; gap: 20px; align-items: center; margin-top: 4px; }
+        .radio-group label { font-weight: normal; margin: 0; font-size: 0.95em; }
+        .form-actions { display: flex; gap: 12px; margin-top: 6px; }
+        .btn-submit { background: #3730a3; color: #fff; border: none; padding: 10px 24px; border-radius: 8px; font-size: 0.95em; font-weight: bold; cursor: pointer; }
+        .btn-submit:hover { background: #1e40af; }
+        .btn-reset { background: rgba(255,255,255,0.1); color: #ccc; border: 1px solid #555; padding: 10px 18px; border-radius: 8px; font-size: 0.95em; cursor: pointer; }
+        .btn-reset:hover { background: rgba(255,255,255,0.2); }
+        .notif { margin: 0 5% 20px; padding: 14px 20px; border-radius: 10px; font-weight: bold; font-size: 0.95em; }
+        .notif.succes { background: rgba(16,185,129,0.2); border: 1px solid #10b981; color: #6ee7b7; }
+        .notif.erreur { background: rgba(239,68,68,0.2); border: 1px solid #ef4444; color: #fca5a5; }
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            const params = new URLSearchParams(window.location.search);
+            const notif  = document.getElementById('notif');
+            if (params.get('succes') === '1') {
+                notif.textContent = '✅ Message envoyé ! Je vous répondrai dès que possible.';
+                notif.className = 'notif succes';
+                notif.style.display = 'block';
+            } else if (params.get('erreur') === 'champs_manquants') {
+                notif.textContent = '⚠️ Merci de remplir tous les champs obligatoires.';
+                notif.className = 'notif erreur';
+                notif.style.display = 'block';
+            } else if (params.get('erreur') === 'email_invalide') {
+                notif.textContent = '⚠️ L\'adresse e-mail saisie n\'est pas valide.';
+                notif.className = 'notif erreur';
+                notif.style.display = 'block';
+            } else if (params.get('erreur') === 'envoi_echoue') {
+                notif.textContent = '❌ L\'envoi a échoué. Contactez-moi directement par e-mail.';
+                notif.className = 'notif erreur';
+                notif.style.display = 'block';
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="bandeau">
+            <div class="photo_titre_bandeau">
+                <img src="image/user_arpoulain.jpeg" alt="photo" class="image_accueil">
+                <h1><a href="index.html">Poulain<br>Arsène</a></h1>
+            </div>
+            <nav id="bouttons_liens_nav">
+                <a href="Projets.html"><div class="bouttons_liens"><strong>Projets</strong></div></a>
+                <a href="Apropos.html"><div class="bouttons_liens"><strong>A propos</strong></div></a>
+                <a href="Competences.html"><div class="bouttons_liens"><strong>Compétences</strong></div></a>
+                <a href="contact.html"><div class="bouttons_liens"><strong>Contact</strong></div></a>
+            </nav>
+        </header>
+        <div class="background"></div>
+        <section class="container">
+            <h1>Contact</h1>
+
+            <div id="notif" style="display:none;"></div>
+
+            <div class="contact-wrapper">
+                <div class="contact-infos">
+                    <h2>Me retrouver</h2>
+                    <div class="info-ligne">📧 arsene.poulain@etu.uca.fr</div>
+                    <div class="info-ligne">📍 Clermont-Ferrand, France</div>
+                    <div class="info-ligne">🎓 BUT Informatique – 1ère année</div>
+                    <div class="info-ligne">💼 En recherche d'alternance</div>
+                    <a href="cv alternance.pdf" download class="cv-btn">⬇ Télécharger mon CV (PDF)</a>
+                </div>
+                <div class="contact-form">
+                    <h2>M'envoyer un message</h2>
+                    <form method="POST" action="https://formspree.io/f/mojzkdlq">
+                        <input type="hidden" name="_subject" value="Nouveau message portfolio">
+                        <input type="hidden" name="_next" value="contact.html?succes=1">
+                        <div class="form-group">
+                            <label for="nomVisiteur">Nom *</label>
+                            <input type="text" name="nomVisiteur" id="nomVisiteur" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="MailVisiteur">Adresse e-mail *</label>
+                            <input type="email" name="MailVisiteur" id="MailVisiteur" placeholder="exemple@mail.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="TelVisiteur">Téléphone (facultatif)</label>
+                            <input type="tel" name="TelVisiteur" id="TelVisiteur" placeholder="06 XX XX XX XX">
+                        </div>
+                        <div class="form-group">
+                            <label for="Motif">Motif de contact</label>
+                            <select name="Motif" id="Motif">
+                                <option value="Recrutement">Recrutement</option>
+                                <option value="Renseignement">Renseignement</option>
+                                <option value="Autre">Autre</option>
+                                <option value="Non Précisé" selected>Non précisé</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Première prise de contact ?</label>
+                            <div class="radio-group">
+                                <input type="radio" name="Demande" id="DemandeOui" value="oui">
+                                <label for="DemandeOui">Oui</label>
+                                <input type="radio" name="Demande" id="DemandeNon" value="non">
+                                <label for="DemandeNon">Non</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="TexteVisiteur">Votre message *</label>
+                            <textarea name="TexteVisiteur" id="TexteVisiteur" placeholder="Décrivez votre demande..." required></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-submit">Envoyer</button>
+                            <button type="reset" class="btn-reset">Réinitialiser</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="basPage"><p>&copy; 2025 Poulain Arsène. Tous droits réservés.</p></footer>
+</body>
+</html>

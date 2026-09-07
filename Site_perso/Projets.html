@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Projets – Arsène Poulain</title>
+    <link rel="stylesheet" href="site.css">
+    <style>
+        .projet-section { margin: 30px 5% 0; }
+        .label-section { font-size: 0.8em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; color: #aaa; margin-bottom: 6px; display: inline-block; }
+        .perso-label { background: #fef9c3; color: #854d0e; padding: 2px 10px; border-radius: 6px; font-size: 0.8em; font-weight: bold; }
+        .projet-bloc { display: flex; align-items: flex-start; gap: 30px; margin-bottom: 40px; flex-wrap: wrap; margin-top: 10px; }
+        .projet-texte { flex: 1 1 55%; }
+        .projet-texte h2 { margin-top: 0; color: #a8c4e0; }
+        .projet-texte p { line-height: 1.7; margin-bottom: 10px; }
+        .projet-img { flex: 0 0 35%; display: flex; align-items: center; justify-content: center; }
+        .projet-img img { max-width: 280px; width: 100%; height: auto; border-radius: 8px; }
+        .separateur { border: none; border-top: 1px solid rgba(255,255,255,0.15); margin: 0 5% 30px; }
+        .badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.82em; font-weight: bold; margin-right: 5px; margin-top: 4px; }
+        .badge-violet { background-color: #e0e7ff; color: #3730a3; }
+        .badge-bleu   { background-color: #dbeafe; color: #1e40af; }
+        .badge-vert   { background-color: #d1fae5; color: #065f46; }
+        .badge-orange { background-color: #fff7ed; color: #9a3412; }
+        .placeholder-img { background: rgba(255,255,255,0.05); border: 2px dashed rgba(255,255,255,0.2); border-radius: 8px; width: 260px; height: 160px; display: flex; align-items: center; justify-content: center; color: #888; font-size: 0.85em; text-align: center; padding: 12px; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="bandeau">
+            <div class="photo_titre_bandeau">
+                <img src="image/user_arpoulain.jpeg" alt="photo" class="image_accueil">
+                <h1><a href="index.html">Poulain<br>Arsène</a></h1>
+            </div>
+            <nav id="bouttons_liens_nav">
+                <a href="Projets.html"><div class="bouttons_liens"><strong>Projets</strong></div></a>
+                <a href="Apropos.html"><div class="bouttons_liens"><strong>A propos</strong></div></a>
+                <a href="Competences.html"><div class="bouttons_liens"><strong>Compétences</strong></div></a>
+                <a href="contact.html"><div class="bouttons_liens"><strong>Contact</strong></div></a>
+            </nav>
+        </header>
+        <div class="background"></div>
+        <section class="container">
+            <h1>Mes Projets</h1>
+
+            <div class="projet-section">
+                <span class="label-section">Réalisation technique – BUT Informatique</span>
+                <div class="projet-bloc">
+                    <div class="projet-texte">
+                        <h2>Jinx — Application desktop .NET MAUI</h2>
+                        <p>Dans le cadre de l'UE 2.1 — <em>Développer des applications informatiques simples</em> — j'ai participé au développement d'une application desktop du jeu de cartes <strong>Jinx</strong>. L'objectif était de proposer une version numérique fidèle au jeu original, enrichie par les possibilités du numérique.</p>
+                        <p>J'ai travaillé sur la logique applicative en C# et la conception de l'interface avec <strong>.NET MAUI</strong>. L'application permet de lancer et sauvegarder une partie, de créer un profil joueur et de personnaliser l'expérience visuelle. Elle intègre des événements aléatoires dynamiques pour augmenter la rejouabilité.</p>
+                        <p>Ce projet mobilise les compétences <strong>C1</strong> (développement), <strong>C5</strong> (conduite de projet) et <strong>C6</strong> (travail en équipe), avec utilisation de Git pour la gestion collaborative du code.</p>
+                        <div>
+                            <span class="badge badge-violet">C# / .NET MAUI</span>
+                            <span class="badge badge-bleu">UE 2.1</span>
+                            <span class="badge badge-vert">C1 · C5 · C6</span>
+                            <span class="badge badge-orange">Travail en équipe</span>
+                        </div>
+                    </div>
+                    <div class="projet-img">
+                        <img src="image/Jinx.png" alt="Illustration du jeu Jinx">
+                    </div>
+                </div>
+            </div>
+
+            <hr class="separateur">
+
+            <div class="projet-section">
+                <span class="label-section">Projet personnel</span>&nbsp;<span class="perso-label">Hors IUT</span>
+                <div class="projet-bloc">
+                    <div class="projet-texte">
+                        <h2>WeTube — Site de partage de documents</h2>
+                        <p>En classe de Terminale, j'ai développé <strong>WeTube</strong>, un site de partage de documents, dans le cadre d'un projet scolaire, puis j'ai choisi de le poursuivre seul pour aller plus loin.</p>
+                        <p>Conçu en <strong>HTML, CSS, PHP et SQL</strong>, le site permet de créer un compte, de se connecter, de publier des documents et d'interagir avec ceux des autres. Je me suis occupé de la conception globale, de la structure de la base de données, de la gestion des utilisateurs et de l'affichage dynamique des contenus.</p>
+                        <p>Ce projet m'a appris à travailler de manière autonome, à structurer un projet complet de l'idée jusqu'au résultat fonctionnel, et à approfondir le back-end avec PHP et SQL.</p>
+                        <div>
+                            <span class="badge badge-violet">HTML / CSS</span>
+                            <span class="badge badge-bleu">PHP</span>
+                            <span class="badge badge-vert">SQL</span>
+                            <span class="badge badge-orange">Projet solo</span>
+                        </div>
+                    </div>
+                    <div class="projet-img">
+                        <!-- Remplace par : <img src="image/wetube_1.png" alt="WeTube"> -->
+                        <img src="image/WeTube.png" alt="WeTube">
+                    </div>
+                </div>
+            </div>
+
+            <div class="bonne-visite"><h2>D'autres projets à venir !</h2></div>
+        </section>
+    </div>
+    <footer class="basPage"><p>&copy; 2025 Poulain Arsène. Tous droits réservés.</p></footer>
+</body>
+</html>

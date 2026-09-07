@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Compétences – Arsène Poulain</title>
+    <link rel="stylesheet" href="site.css">
+    <style>
+        .section-titre { font-size: 1.1em; font-weight: bold; color: #a8c4e0; margin: 30px 5% 12px; border-left: 4px solid #3730a3; padding-left: 10px; }
+        .comp-intro { margin: 20px 5% 0; line-height: 1.7; }
+        .competences-but { display: flex; flex-direction: column; gap: 14px; margin: 0 5% 30px; }
+        .comp-card { background: rgba(80,80,80,0.75); border: 1px solid rgba(255,255,255,0.15); border-radius: 10px; padding: 16px 20px; display: flex; gap: 18px; align-items: flex-start; }
+        .comp-num { font-size: 1.6em; font-weight: 900; color: #c7d2fe; min-width: 40px; line-height: 1; }
+        .comp-body h3 { margin: 0 0 6px; font-size: 1em; color: #a8c4e0; }
+        .comp-body p { margin: 0 0 8px; font-size: 0.9em; line-height: 1.5; }
+        .niveau { display: inline-block; padding: 2px 10px; border-radius: 10px; font-size: 0.8em; font-weight: bold; }
+        .niveau.ok { background: #d1fae5; color: #065f46; }
+        .niveau.wip { background: #fef9c3; color: #854d0e; }
+        .tech-grid { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 5% 30px; }
+        .tech-item { background: rgba(80,80,80,0.75); border: 1px solid rgba(255,255,255,0.15); border-radius: 10px; padding: 12px 18px; min-width: 140px; text-align: center; }
+        .tech-nom { font-weight: bold; font-size: 0.95em; color: #a8c4e0; }
+        .tech-bar-wrap { background: rgba(255,255,255,0.15); border-radius: 6px; height: 6px; margin-top: 8px; overflow: hidden; }
+        .tech-bar-fill { height: 100%; border-radius: 6px; background: #3730a3; }
+        .tech-pct { font-size: 0.75em; color: #aaa; margin-top: 4px; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="bandeau">
+            <div class="photo_titre_bandeau">
+                <img src="image/user_arpoulain.jpeg" alt="photo" class="image_accueil">
+                <h1><a href="index.html">Poulain<br>Arsène</a></h1>
+            </div>
+            <nav id="bouttons_liens_nav">
+                <a href="Projets.html"><div class="bouttons_liens"><strong>Projets</strong></div></a>
+                <a href="Apropos.html"><div class="bouttons_liens"><strong>A propos</strong></div></a>
+                <a href="Competences.html"><div class="bouttons_liens"><strong>Compétences</strong></div></a>
+                <a href="contact.html"><div class="bouttons_liens"><strong>Contact</strong></div></a>
+            </nav>
+        </header>
+        <div class="background"></div>
+        <section class="container">
+            <h1>Mes Compétences</h1>
+            <p class="comp-intro">Le BUT Informatique s'articule autour de <strong>6 compétences officielles</strong>. Voici où j'en suis à l'issue de ma première année.</p>
+            <div class="section-titre">Les 6 compétences du BUT Informatique</div>
+            <div class="competences-but">
+                <div class="comp-card">
+                    <div class="comp-num">C1</div>
+                    <div class="comp-body">
+                        <h3>Réaliser un développement d'application</h3>
+                        <p>Développement de Jinx en C# / .NET MAUI, conception de WeTube en HTML/CSS/PHP/SQL.</p>
+                        <span class="niveau ok">Confirmé</span>
+                    </div>
+                </div>
+                <div class="comp-card">
+                    <div class="comp-num">C2</div>
+                    <div class="comp-body">
+                        <h3>Optimiser des applications</h3>
+                        <p>Analyse algorithmique, structures de données, amélioration des performances en SAé.</p>
+                        <span class="niveau wip">En progression</span>
+                    </div>
+                </div>
+                <div class="comp-card">
+                    <div class="comp-num">C3</div>
+                    <div class="comp-body">
+                        <h3>Administrer des systèmes informatiques communicants complexes</h3>
+                        <p>Initiation aux réseaux, systèmes Linux, utilisation de Docker et containers via Code#0.</p>
+                        <span class="niveau wip">En progression</span>
+                    </div>
+                </div>
+                <div class="comp-card">
+                    <div class="comp-num">C4</div>
+                    <div class="comp-body">
+                        <h3>Gérer des données de l'information</h3>
+                        <p>Conception et requêtage de bases de données SQL pour WeTube, modélisation de données.</p>
+                        <span class="niveau ok">Confirmé</span>
+                    </div>
+                </div>
+                <div class="comp-card">
+                    <div class="comp-num">C5</div>
+                    <div class="comp-body">
+                        <h3>Conduire un projet</h3>
+                        <p>Gestion du projet Jinx en équipe, planification des tâches et suivi des livrables.</p>
+                        <span class="niveau ok">Confirmé</span>
+                    </div>
+                </div>
+                <div class="comp-card">
+                    <div class="comp-num">C6</div>
+                    <div class="comp-body">
+                        <h3>Collaborer au sein d'une équipe informatique</h3>
+                        <p>Travail en groupe sur les SAé, utilisation de Git, partage des responsabilités.</p>
+                        <span class="niveau ok">Confirmé</span>
+                    </div>
+                </div>
+            </div>
+            <div class="section-titre">Technologies</div>
+            <div class="tech-grid">
+                <div class="tech-item"><div class="tech-nom">HTML / CSS</div><div class="tech-bar-wrap"><div class="tech-bar-fill" style="width:90%"></div></div><div class="tech-pct">Avancé</div></div>
+                <div class="tech-item"><div class="tech-nom">PHP</div><div class="tech-bar-wrap"><div class="tech-bar-fill" style="width:65%"></div></div><div class="tech-pct">Intermédiaire</div></div>
+                <div class="tech-item"><div class="tech-nom">SQL</div><div class="tech-bar-wrap"><div class="tech-bar-fill" style="width:60%"></div></div><div class="tech-pct">Intermédiaire</div></div>
+                <div class="tech-item"><div class="tech-nom">C# / .NET MAUI</div><div class="tech-bar-wrap"><div class="tech-bar-fill" style="width:50%"></div></div><div class="tech-pct">En progression</div></div>
+                <div class="tech-item"><div class="tech-nom">Python</div><div class="tech-bar-wrap"><div class="tech-bar-fill" style="width:45%"></div></div><div class="tech-pct">En progression</div></div>
+                <div class="tech-item"><div class="tech-nom">Git</div><div class="tech-bar-wrap"><div class="tech-bar-fill" style="width:55%"></div></div><div class="tech-pct">Intermédiaire</div></div>
+            </div>
+        </section>
+    </div>
+    <footer class="basPage"><p>&copy; 2025 Poulain Arsène. Tous droits réservés.</p></footer>
+</body>
+</html>
